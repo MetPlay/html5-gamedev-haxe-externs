@@ -11,7 +11,7 @@ typedef Vector2D = { x : Float, y : Float }
 @:native("engine.core.transform")
 extern class Transform
 {
-	public function new() : Void;
+	public function new(predef : Dynamic) : Void;
 	
 	public var tag : Dynamic;
 	public var name : String;
@@ -29,7 +29,7 @@ extern class Transform
 
 	public var parent : Transform;
 
-	//public var asset : temp_asset,
+	public var asset : Asset;
 
 	public function	rotateBy(angle : Float) : Void;
 	public function rotateTo(angle : Float) : Void;
@@ -41,7 +41,7 @@ extern class Transform
 	public function scaleFor(dx : Float, dy : Float) : Void;
 	public function scaleTo(x : Float, y : Float) : Void;
 	
-	public function addChild(child : Transform, frontOrBack : Bool) : Transform;
+	public function addChild(child : Transform, ?frontOrBack : Bool) : Transform;
 	public function addUpdateHook(hook : Void -> Void) : Transform;
 	public function addRenderHook(hook : Void -> Void) : Transform;
 	public function addLateRenderHook(hook : Void -> Void) : Transform;
