@@ -8,7 +8,7 @@ package engine.core;
 extern class Time
 {
 	public static function measure() : Void;
-	public static function delta(scale : Float) : Float;	
+	public static function delta(?scale : Float) : Float;	
 }
 
 @:native("engine.core.time.moment")
@@ -16,7 +16,7 @@ extern class Moment
 {
 	public static var now(default, null) : Float;
 	public static var then(default, null) : Float;
-	public static var delta(default, null) : Float
+	public static var delta(default, null) : Float;
 }
 
 @:native("engine.core.time.scale")

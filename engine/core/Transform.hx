@@ -42,9 +42,9 @@ extern class Transform
 	public function scaleTo(x : Float, y : Float) : Void;
 	
 	public function addChild(child : Transform, ?frontOrBack : Bool) : Transform;
-	public function addUpdateHook(hook : Void -> Void) : Transform;
-	public function addRenderHook(hook : Void -> Void) : Transform;
-	public function addLateRenderHook(hook : Void -> Void) : Transform;
+	public function addUpdateHook(hook : Dynamic -> Void) : Transform;
+	public function addRenderHook(hook : Dynamic -> Void) : Transform;
+	public function addLateRenderHook(hook : Dynamic -> Void) : Transform;
 
 	public var render : Dynamic -> Engine.Drawing -> Void;
 	public var onMouse : Dynamic -> Event -> Void;
